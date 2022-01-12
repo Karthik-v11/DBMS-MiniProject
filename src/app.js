@@ -49,12 +49,12 @@ App = {
 
   loadContract: async () => {
     // Create a JavaScript version of the smart contract
-    const todoList = await $.getJSON('TodoList.json')
-    App.contracts.TodoList = TruffleContract(todoList)
+    const bankMng = await $.getJSON('TodoList.json')
+    App.contracts.TodoList = TruffleContract(bankMng)
     App.contracts.TodoList.setProvider(App.web3Provider)
 
     // Hydrate the smart contract with values from the blockchain
-    App.todoList = await App.contracts.TodoList.deployed()
+    App.bankMng = await App.contracts.TodoList.deployed()
   },
 
   render: async () => {
@@ -78,13 +78,14 @@ App = {
 
   renderTasks: async () => {
     // Load the total task count from the blockchain
-    const taskCount = await App.todoList.taskCount()
+    const taskCount = await App.bankMng.taskCount()
     const $taskTemplate = $('.taskTemplate')
+    const $taskTemplate1 = $('.taskTemplate1')
 
     // Render out each task with a new task template
     for (var i = 1; i <= taskCount; i++) {
       // Fetch the task data from the blockchain
-      const task = await App.todoList.tasks(i)
+      const task = await App.bankMng.tasks(i)
       const taskId = task[0].toNumber()
       const taskContent = task[1]
       const taskCompleted = task[2]
@@ -97,29 +98,44 @@ App = {
                       .prop('checked', taskCompleted)
                       .on('click', App.toggleCompleted)
 
+      const $newTaskTemplate1 = $taskTemplate1.clone()
+      $newTaskTemplate1.find('.content').html(taskContent)
+      $newTaskTemplate1.find('input')
+                        .prop('name', taskId)
+                        .prop('checked', taskCompleted)
+                        .on('click', App.toggleCompleted)
+
       // Put the task in the correct list
       if (taskCompleted) {
-        $('#completedTaskList').append($newTaskTemplate)
+        $('#completedTaskList').append($newTaskTemplate || $newTaskTemplate1)
       } else {
-        $('#taskList').append($newTaskTemplate)
+        $('#taskList').append($newTaskTemplate || $newTaskTemplate1)
       }
 
       // Show the task
       $newTaskTemplate.show()
+      $newTaskTemplate1.show()
     }
   },
 
   createTask: async () => {
     App.setLoading(true)
     const content = $('#newTask').val()
-    await App.todoList.createTask(content)
+    await App.bankMng.createTask(content)
+    window.location.reload()
+  },
+
+  createTask1: async () => {
+    App.setLoading(true)
+    const content = $('#newTask').val()
+    await App.bankMng.createTask1(content)
     window.location.reload()
   },
 
   toggleCompleted: async (e) => {
     App.setLoading(true)
     const taskId = e.target.name
-    await App.todoList.toggleCompleted(taskId)
+    await App.bankMng.toggleCompleted(taskId)
     window.location.reload()
   },
 

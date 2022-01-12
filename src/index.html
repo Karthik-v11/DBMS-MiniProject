@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,11 +61,23 @@
         </div>
         <div id="content">
           <form onSubmit="App.createTask(); return false;">
-            <input id="newTask" type="text" class="form-control" placeholder="Add task..." required>
+            <input id="newTask" type="text" class="form-control" placeholder="Add Account number..." required>
+            <input type="submit" hidden="">
+          </form>
+          <form onSubmit="App.createTask1(); return false;">
+            <input id="newTask" type="text" class="form-control" placeholder="Add Name" required>
             <input type="submit" hidden="">
           </form>
           <ul id="taskList" class="list-unstyled">
             <div class="taskTemplate" class="checkbox" style="display: none">
+              <label>
+                <input type="checkbox" />
+                <span class="content">Task content goes here...</span>
+              </label>
+            </div>
+          </ul>
+          <ul id="taskList" class="list-unstyled">
+            <div class="taskTemplate1" class="checkbox" style="display: none">
               <label>
                 <input type="checkbox" />
                 <span class="content">Task content goes here...</span>
