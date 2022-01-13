@@ -49,12 +49,12 @@ App = {
 
   loadContract: async () => {
     // Create a JavaScript version of the smart contract
-    const todoList = await $.getJSON('TodoList.json')
-    App.contracts.TodoList = TruffleContract(todoList)
-    App.contracts.TodoList.setProvider(App.web3Provider)
+    const BankMgm = await $.getJSON('BankManagement.json')
+    App.contracts.BankManagement = TruffleContract(BankMgm)
+    App.contracts.BankManagement.setProvider(App.web3Provider)
 
     // Hydrate the smart contract with values from the blockchain
-    App.todoList = await App.contracts.TodoList.deployed()
+    App.BankMgm = await App.contracts.BankManagement.deployed()
   },
 
   render: async () => {
@@ -78,48 +78,38 @@ App = {
 
   renderTasks: async () => {
     // Load the total task count from the blockchain
-    const taskCount = await App.todoList.taskCount()
+    const userCount = await App.BankMgm.userCount()
     const $taskTemplate = $('.taskTemplate')
 
     // Render out each task with a new task template
-    for (var i = 1; i <= taskCount; i++) {
+    for (var i = 1; i <= userCount; i++) {
       // Fetch the task data from the blockchain
-      const task = await App.todoList.tasks(i)
-      const taskId = task[0].toNumber()
-      const taskContent = task[1]
-      const taskCompleted = task[2]
+      const user = await App.BankMgm.users(i)
+      const userId = user[0].toNumber()
+      const userAccNo = user[1]
+      const userName=user[2]
 
       // Create the html for the task
       const $newTaskTemplate = $taskTemplate.clone()
-      $newTaskTemplate.find('.content').html(taskContent)
+      $newTaskTemplate.find('.accNo').html(userAccNo)
+      $newTaskTemplate.find('.userName').html(userName)
       $newTaskTemplate.find('input')
-                      .prop('name', taskId)
-                      .prop('checked', taskCompleted)
-                      .on('click', App.toggleCompleted)
+                      .prop('name', userId)
 
       // Put the task in the correct list
-      if (taskCompleted) {
-        $('#completedTaskList').append($newTaskTemplate)
-      } else {
-        $('#taskList').append($newTaskTemplate)
-      }
+     
+      $('#taskList').append($newTaskTemplate)
 
       // Show the task
       $newTaskTemplate.show()
     }
   },
 
-  createTask: async () => {
+  createUser: async () => {
     App.setLoading(true)
-    const content = $('#newTask').val()
-    await App.todoList.createTask(content)
-    window.location.reload()
-  },
-
-  toggleCompleted: async (e) => {
-    App.setLoading(true)
-    const taskId = e.target.name
-    await App.todoList.toggleCompleted(taskId)
+    const accNo = $('#accountNo').val()
+    const userName = $('#Name').val()
+    await App.BankMgm.createUser(accNo,userName)
     window.location.reload()
   },
 

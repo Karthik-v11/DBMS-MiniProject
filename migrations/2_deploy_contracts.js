@@ -1,5 +1,5 @@
-var TodoList = artifacts.require("./TodoList.sol");
+var Banksystem = artifacts.require("./BankManagement.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(TodoList);
+  deployer.deploy(Banksystem);
 };
