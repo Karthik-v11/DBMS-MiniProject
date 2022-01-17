@@ -51,18 +51,42 @@
           <p class="text-center">Loading...</p>
         </div>
         <div id="content">
-          <form onSubmit="App.createUser();">
-            <input id="accountNo" type="text" class="form-control" placeholder="Add account number..." required>
-            <input id="Name" type="text" class="form-control" placeholder="Add Name..." required>
+          <form onSubmit="App.createUser()">
+            <input id="accountNo" type="number" class="form-control" placeholder="Add account number..." required>
+            <input id="ifsc" type="text" class="form-control" placeholder="Add ifsc code..." required>
+            <input id="branchName" type="text" class="form-control" placeholder="Add branch Name..." required>
+            <input id="Name" type="text" class="form-control" placeholder="Add user Name..." required>
+            <input id="address" type="text" class="form-control" placeholder="Add user address..." required>
+            <input id="birthDate" type="text" class="form-control" placeholder="Add user birthdate..." required>
+            <input id="mobileNo" type="number" class="form-control" placeholder="Add user mobile number..." required>
+            <input id="balance" type="number" class="form-control" placeholder="Add user balance..." required>
             <input type="submit">
           </form>
-          <ul id="taskList" class="list-unstyled">
-            <div class="taskTemplate" class="checkbox" style="display: none">
+          <ul id="usersList" class="list-unstyled">
+            <div class="userTemplate" class="checkbox" style="display: none">
               <label>
                 <span class="accNo">Task content goes here...</span>
               </label>
               <label>
+                <span class="ifsc">Task content goes here...</span>
+              </label>
+              <label>
+                <span class="branchName">Task content goes here...</span>
+              </label>
+              <label>
                 <span class="userName">Task content goes here...</span>
+              </label>
+              <label>
+                <span class="address">Task content goes here...</span>
+              </label>
+              <label>
+                <span class="dob">Task content goes here...</span>
+              </label>
+              <label>
+                <span class="balance">Task content goes here...</span>
+              </label>
+              <label>
+                <span class="mobileNo">Task content goes here...</span>
               </label>
             </div>
           </ul>
@@ -73,9 +97,7 @@
     </div>
   </div>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
   <script src="app.js"></script>

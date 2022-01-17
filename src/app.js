@@ -43,73 +43,76 @@ App = {
   },
 
   loadAccount: async () => {
-    // Set the current blockchain account
     App.account = web3.eth.accounts[0]
   },
 
   loadContract: async () => {
-    // Create a JavaScript version of the smart contract
     const BankMgm = await $.getJSON('BankManagement.json')
     App.contracts.BankManagement = TruffleContract(BankMgm)
     App.contracts.BankManagement.setProvider(App.web3Provider)
 
-    // Hydrate the smart contract with values from the blockchain
     App.BankMgm = await App.contracts.BankManagement.deployed()
   },
 
   render: async () => {
-    // Prevent double render
     if (App.loading) {
       return
     }
 
-    // Update app loading state
     App.setLoading(true)
 
-    // Render Account
     $('#account').html(App.account)
 
-    // Render Tasks
     await App.renderTasks()
 
-    // Update loading state
     App.setLoading(false)
   },
 
   renderTasks: async () => {
-    // Load the total task count from the blockchain
     const userCount = await App.BankMgm.userCount()
-    const $taskTemplate = $('.taskTemplate')
+    const $userTemplate = $('.userTemplate')
 
-    // Render out each task with a new task template
     for (var i = 1; i <= userCount; i++) {
-      // Fetch the task data from the blockchain
       const user = await App.BankMgm.users(i)
-      const userId = user[0].toNumber()
-      const userAccNo = user[1]
-      const userName=user[2]
+      const userAccNo = user[1].toNumber()
+      const userIFSC = user[2]
+      const userBranch=user[3]
+      const userName = user[4]
+      const userAddress = user[5]
+      const userDob = user[6]
+      const userBalance = user[7].toNumber()
+      const userMobileNumber=user[8].toNumber()
 
       // Create the html for the task
-      const $newTaskTemplate = $taskTemplate.clone()
-      $newTaskTemplate.find('.accNo').html(userAccNo)
-      $newTaskTemplate.find('.userName').html(userName)
-      $newTaskTemplate.find('input')
-                      .prop('name', userId)
-
-      // Put the task in the correct list
+      const $newUserTemplate = $userTemplate.clone()
+      $newUserTemplate.find('.accNo').html(userAccNo)
+      $newUserTemplate.find('.ifsc').html(userIFSC)
+      $newUserTemplate.find('.branchName').html(userBranch)
+      $newUserTemplate.find('.userName').html(userName)
+      $newUserTemplate.find('.address').html(userAddress)
+      $newUserTemplate.find('.dob').html(userDob)
+      $newUserTemplate.find('.balance').html(userBalance)
+      $newUserTemplate.find('.mobileNo').html(userMobileNumber)
      
-      $('#taskList').append($newTaskTemplate)
-
-      // Show the task
-      $newTaskTemplate.show()
+      $('#usersList').append($newUserTemplate)
+      $newUserTemplate.show()
     }
   },
 
   createUser: async () => {
     App.setLoading(true)
     const accNo = $('#accountNo').val()
+    const ifsc = $('#ifsc').val()
+    const branchName = $('#branchName').val()
     const userName = $('#Name').val()
-    await App.BankMgm.createUser(accNo,userName)
+    const address = $('#address').val()
+    const dob = $('#birthDate').val()
+    const balance = $('#balance').val()
+    const userNumber = $('#mobileNo').val()
+
+    console.log(accNo,ifsc,branchName,userName,address,dob,balance,userNumber)
+
+    await App.BankMgm.createUser(accNo,ifsc,branchName,userName,address,dob,balance,userNumber)
     window.location.reload()
   },
 

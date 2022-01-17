@@ -5,8 +5,14 @@ contract BankManagement {
 
   struct User {
     uint id;
-    string accountNo;
+    uint accountNo;
+    string IFSC;
+    string branchName;
     string Name;
+    string addres;
+    string birthdate;
+    uint balance;
+    uint mobileNo;
   }
   
 
@@ -14,15 +20,25 @@ contract BankManagement {
 
   event userCreated(
     uint id,
-    string accountNo,
-    string Name
+    uint accountNo,
+    string IFSC,
+    string branchName,
+    string Name,
+    string addres,
+    string birthdate,
+    uint balance,
+    uint mobileNo
   );
 
+  constructor() public {
+    createUser(123,"3wqeasdf","sdAFads","sadfasdfasdf","asdfasdf","32423",234123,432534534);
+  }
 
-  function createUser(string memory _accountNo,string memory _Name) public {
+
+  function createUser(uint _accountNo,string memory _IFSC,string memory _branchName,string memory _Name,string memory _addres,string memory _birthdate,uint _balance,uint _mobileNo) public {
     userCount ++;
-    users[userCount] = User(userCount, _accountNo, _Name);
-    emit userCreated(userCount, _accountNo, _Name);
+    users[userCount] = User(userCount, _accountNo,_IFSC,_branchName, _Name,_addres,_birthdate,_balance,_mobileNo);
+    emit userCreated(userCount, _accountNo, _IFSC,_branchName,_Name,_addres,_birthdate,_balance,_mobileNo);
   }
 
 }
