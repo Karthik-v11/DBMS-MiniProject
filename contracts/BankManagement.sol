@@ -30,11 +30,6 @@ contract BankManagement {
     uint mobileNo
   );
 
-  constructor() public {
-    createUser(123,"3wqeasdf","sdAFads","sadfasdfasdf","asdfasdf","32423",234123,432534534);
-  }
-
-
   function createUser(uint _accountNo,string memory _IFSC,string memory _branchName,string memory _Name,string memory _addres,string memory _birthdate,uint _balance,uint _mobileNo) public {
     userCount ++;
     users[userCount] = User(userCount, _accountNo,_IFSC,_branchName, _Name,_addres,_birthdate,_balance,_mobileNo);
