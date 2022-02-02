@@ -64,6 +64,7 @@
       "type": "function"
     }
   ],
+<<<<<<< Updated upstream
   "bytecode": "0x608060405234801561001057600080fd5b5060008054600160a060020a0319163317905561025d806100326000396000f3fe6080604052600436106100615763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630900f0108114610066578063445df0ac146100a85780638da5cb5b146100cf578063fdacd5761461010d575b600080fd5b34801561007257600080fd5b506100a66004803603602081101561008957600080fd5b503573ffffffffffffffffffffffffffffffffffffffff16610137565b005b3480156100b457600080fd5b506100bd6101ea565b60408051918252519081900360200190f35b3480156100db57600080fd5b506100e46101f0565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561011957600080fd5b506100a66004803603602081101561013057600080fd5b503561020c565b60005473ffffffffffffffffffffffffffffffffffffffff163314156101e75760008190508073ffffffffffffffffffffffffffffffffffffffff1663fdacd5766001546040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180828152602001915050600060405180830381600087803b1580156101cd57600080fd5b505af11580156101e1573d6000803e3d6000fd5b50505050505b50565b60015481565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b60005473ffffffffffffffffffffffffffffffffffffffff163314156101e75760015556fea165627a7a72305820d39d7d0312cd3d93cf5412919aa794e10405944a367e60d56a371b81de38f8660029",
   "deployedBytecode": "0x6080604052600436106100615763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630900f0108114610066578063445df0ac146100a85780638da5cb5b146100cf578063fdacd5761461010d575b600080fd5b34801561007257600080fd5b506100a66004803603602081101561008957600080fd5b503573ffffffffffffffffffffffffffffffffffffffff16610137565b005b3480156100b457600080fd5b506100bd6101ea565b60408051918252519081900360200190f35b3480156100db57600080fd5b506100e46101f0565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561011957600080fd5b506100a66004803603602081101561013057600080fd5b503561020c565b60005473ffffffffffffffffffffffffffffffffffffffff163314156101e75760008190508073ffffffffffffffffffffffffffffffffffffffff1663fdacd5766001546040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180828152602001915050600060405180830381600087803b1580156101cd57600080fd5b505af11580156101e1573d6000803e3d6000fd5b50505050505b50565b60015481565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b60005473ffffffffffffffffffffffffffffffffffffffff163314156101e75760015556fea165627a7a72305820d39d7d0312cd3d93cf5412919aa794e10405944a367e60d56a371b81de38f8660029",
   "sourceMap": "34:480:0:-;;;123:50;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;150:5:0;:18;;-1:-1:-1;;;;;;150:18:0;158:10;150:18;;;34:480;;;;;;",
@@ -82,6 +83,26 @@
     "nodes": [
       {
         "id": 1,
+=======
+  "bytecode": "0x608060405234801561001057600080fd5b5060008054600160a060020a0319163317905560c6806100316000396000f3fe608060405260043610603e5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b81146043575b600080fd5b348015604e57600080fd5b506055607e565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a7230582018272e8b825e4fd3fcb14c27fed01102ffe707be999b18b1286c988173c6a1e40029",
+  "deployedBytecode": "0x608060405260043610603e5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b81146043575b600080fd5b348015604e57600080fd5b506055607e565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a7230582018272e8b825e4fd3fcb14c27fed01102ffe707be999b18b1286c988173c6a1e40029",
+  "sourceMap": "36:176:1:-;;;88:52;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;116:5:1;:18;;-1:-1:-1;;;;;;116:18:1;124:10;116:18;;;36:176;;;;;;",
+  "deployedSourceMap": "36:176:1:-;;;;;;;;;;;;;;;;;;;;;;;61:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;61:20:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.21 <0.6.0;\r\n\r\ncontract Migrations {\r\n  address public owner;\r\n\r\n  constructor() public {\r\n    owner = msg.sender;\r\n  }\r\n\r\n  modifier restricted() {\r\n    if (msg.sender == owner) _;\r\n  }\r\n\r\n}\r\n",
+  "sourcePath": "D:/DBMS-mini/DBMS-MiniProject/contracts/Migrations.sol",
+  "ast": {
+    "absolutePath": "/D/DBMS-mini/DBMS-MiniProject/contracts/Migrations.sol",
+    "exportedSymbols": {
+      "Migrations": [
+        137
+      ]
+    },
+    "id": 138,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 116,
+>>>>>>> Stashed changes
         "literals": [
           "solidity",
           ">=",
@@ -100,20 +121,34 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
+<<<<<<< Updated upstream
         "id": 56,
         "linearizedBaseContracts": [
           56
+=======
+        "id": 137,
+        "linearizedBaseContracts": [
+          137
+>>>>>>> Stashed changes
         ],
         "name": "Migrations",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
+<<<<<<< Updated upstream
             "id": 3,
             "name": "owner",
             "nodeType": "VariableDeclaration",
             "scope": 56,
             "src": "58:20:0",
+=======
+            "id": 118,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 137,
+            "src": "61:20:1",
+>>>>>>> Stashed changes
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -121,7 +156,11 @@
               "typeString": "address"
             },
             "typeName": {
+<<<<<<< Updated upstream
               "id": 2,
+=======
+              "id": 117,
+>>>>>>> Stashed changes
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "58:7:0",
@@ -162,26 +201,43 @@
           },
           {
             "body": {
+<<<<<<< Updated upstream
               "id": 13,
+=======
+              "id": 126,
+>>>>>>> Stashed changes
               "nodeType": "Block",
               "src": "144:29:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
+<<<<<<< Updated upstream
                     "id": 11,
+=======
+                    "id": 124,
+>>>>>>> Stashed changes
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
+<<<<<<< Updated upstream
                       "id": 8,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3,
                       "src": "150:5:0",
+=======
+                      "id": 121,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 118,
+                      "src": "116:5:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -193,18 +249,31 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
+<<<<<<< Updated upstream
                         "id": 9,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 159,
                         "src": "158:3:0",
+=======
+                        "id": 122,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 152,
+                        "src": "124:3:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
+<<<<<<< Updated upstream
                       "id": 10,
+=======
+                      "id": 123,
+>>>>>>> Stashed changes
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -224,40 +293,65 @@
                       "typeString": "address"
                     }
                   },
+<<<<<<< Updated upstream
                   "id": 12,
+=======
+                  "id": 125,
+>>>>>>> Stashed changes
                   "nodeType": "ExpressionStatement",
                   "src": "150:18:0"
                 }
               ]
             },
             "documentation": null,
+<<<<<<< Updated upstream
             "id": 14,
+=======
+            "id": 127,
+>>>>>>> Stashed changes
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
+<<<<<<< Updated upstream
               "id": 6,
+=======
+              "id": 119,
+>>>>>>> Stashed changes
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "134:2:0"
             },
             "returnParameters": {
+<<<<<<< Updated upstream
               "id": 7,
+=======
+              "id": 120,
+>>>>>>> Stashed changes
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "144:0:0"
             },
+<<<<<<< Updated upstream
             "scope": 56,
             "src": "123:50:0",
+=======
+            "scope": 137,
+            "src": "88:52:1",
+>>>>>>> Stashed changes
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
+<<<<<<< Updated upstream
               "id": 22,
+=======
+              "id": 135,
+>>>>>>> Stashed changes
               "nodeType": "Block",
               "src": "199:37:0",
               "statements": [
@@ -268,7 +362,11 @@
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
+<<<<<<< Updated upstream
                     "id": 19,
+=======
+                    "id": 132,
+>>>>>>> Stashed changes
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -277,18 +375,31 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
+<<<<<<< Updated upstream
                         "id": 16,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 159,
                         "src": "209:3:0",
+=======
+                        "id": 129,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 152,
+                        "src": "179:3:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
+<<<<<<< Updated upstream
                       "id": 17,
+=======
+                      "id": 130,
+>>>>>>> Stashed changes
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -306,12 +417,21 @@
                     "operator": "==",
                     "rightExpression": {
                       "argumentTypes": null,
+<<<<<<< Updated upstream
                       "id": 18,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3,
                       "src": "223:5:0",
+=======
+                      "id": 131,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 118,
+                      "src": "193:5:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -324,11 +444,19 @@
                     }
                   },
                   "falseBody": null,
+<<<<<<< Updated upstream
                   "id": 21,
+=======
+                  "id": 134,
+>>>>>>> Stashed changes
                   "nodeType": "IfStatement",
                   "src": "205:26:0",
                   "trueBody": {
+<<<<<<< Updated upstream
                     "id": 20,
+=======
+                    "id": 133,
+>>>>>>> Stashed changes
                     "nodeType": "PlaceholderStatement",
                     "src": "230:1:0"
                   }
@@ -336,11 +464,19 @@
               ]
             },
             "documentation": null,
+<<<<<<< Updated upstream
             "id": 23,
             "name": "restricted",
             "nodeType": "ModifierDefinition",
             "parameters": {
               "id": 15,
+=======
+            "id": 136,
+            "name": "restricted",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 128,
+>>>>>>> Stashed changes
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "196:2:0"
@@ -713,13 +849,19 @@
             "visibility": "public"
           }
         ],
+<<<<<<< Updated upstream
         "scope": 57,
         "src": "34:480:0"
+=======
+        "scope": 138,
+        "src": "36:176:1"
+>>>>>>> Stashed changes
       }
     ],
     "src": "0:515:0"
   },
   "legacyAST": {
+<<<<<<< Updated upstream
     "absolutePath": "/D/DBMS_proj/DBMS-MiniProject-main/contracts/Migrations.sol",
     "exportedSymbols": {
       "Migrations": [
@@ -731,6 +873,19 @@
     "nodes": [
       {
         "id": 1,
+=======
+    "absolutePath": "/D/DBMS-mini/DBMS-MiniProject/contracts/Migrations.sol",
+    "exportedSymbols": {
+      "Migrations": [
+        137
+      ]
+    },
+    "id": 138,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 116,
+>>>>>>> Stashed changes
         "literals": [
           "solidity",
           ">=",
@@ -749,20 +904,34 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
+<<<<<<< Updated upstream
         "id": 56,
         "linearizedBaseContracts": [
           56
+=======
+        "id": 137,
+        "linearizedBaseContracts": [
+          137
+>>>>>>> Stashed changes
         ],
         "name": "Migrations",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
+<<<<<<< Updated upstream
             "id": 3,
             "name": "owner",
             "nodeType": "VariableDeclaration",
             "scope": 56,
             "src": "58:20:0",
+=======
+            "id": 118,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 137,
+            "src": "61:20:1",
+>>>>>>> Stashed changes
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -770,7 +939,11 @@
               "typeString": "address"
             },
             "typeName": {
+<<<<<<< Updated upstream
               "id": 2,
+=======
+              "id": 117,
+>>>>>>> Stashed changes
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "58:7:0",
@@ -811,26 +984,43 @@
           },
           {
             "body": {
+<<<<<<< Updated upstream
               "id": 13,
+=======
+              "id": 126,
+>>>>>>> Stashed changes
               "nodeType": "Block",
               "src": "144:29:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
+<<<<<<< Updated upstream
                     "id": 11,
+=======
+                    "id": 124,
+>>>>>>> Stashed changes
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
+<<<<<<< Updated upstream
                       "id": 8,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3,
                       "src": "150:5:0",
+=======
+                      "id": 121,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 118,
+                      "src": "116:5:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -842,18 +1032,31 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
+<<<<<<< Updated upstream
                         "id": 9,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 159,
                         "src": "158:3:0",
+=======
+                        "id": 122,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 152,
+                        "src": "124:3:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
+<<<<<<< Updated upstream
                       "id": 10,
+=======
+                      "id": 123,
+>>>>>>> Stashed changes
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -873,40 +1076,65 @@
                       "typeString": "address"
                     }
                   },
+<<<<<<< Updated upstream
                   "id": 12,
+=======
+                  "id": 125,
+>>>>>>> Stashed changes
                   "nodeType": "ExpressionStatement",
                   "src": "150:18:0"
                 }
               ]
             },
             "documentation": null,
+<<<<<<< Updated upstream
             "id": 14,
+=======
+            "id": 127,
+>>>>>>> Stashed changes
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
+<<<<<<< Updated upstream
               "id": 6,
+=======
+              "id": 119,
+>>>>>>> Stashed changes
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "134:2:0"
             },
             "returnParameters": {
+<<<<<<< Updated upstream
               "id": 7,
+=======
+              "id": 120,
+>>>>>>> Stashed changes
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "144:0:0"
             },
+<<<<<<< Updated upstream
             "scope": 56,
             "src": "123:50:0",
+=======
+            "scope": 137,
+            "src": "88:52:1",
+>>>>>>> Stashed changes
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
+<<<<<<< Updated upstream
               "id": 22,
+=======
+              "id": 135,
+>>>>>>> Stashed changes
               "nodeType": "Block",
               "src": "199:37:0",
               "statements": [
@@ -917,7 +1145,11 @@
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
+<<<<<<< Updated upstream
                     "id": 19,
+=======
+                    "id": 132,
+>>>>>>> Stashed changes
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -926,18 +1158,31 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
+<<<<<<< Updated upstream
                         "id": 16,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 159,
                         "src": "209:3:0",
+=======
+                        "id": 129,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 152,
+                        "src": "179:3:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
+<<<<<<< Updated upstream
                       "id": 17,
+=======
+                      "id": 130,
+>>>>>>> Stashed changes
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -955,12 +1200,21 @@
                     "operator": "==",
                     "rightExpression": {
                       "argumentTypes": null,
+<<<<<<< Updated upstream
                       "id": 18,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3,
                       "src": "223:5:0",
+=======
+                      "id": 131,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 118,
+                      "src": "193:5:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -973,11 +1227,19 @@
                     }
                   },
                   "falseBody": null,
+<<<<<<< Updated upstream
                   "id": 21,
+=======
+                  "id": 134,
+>>>>>>> Stashed changes
                   "nodeType": "IfStatement",
                   "src": "205:26:0",
                   "trueBody": {
+<<<<<<< Updated upstream
                     "id": 20,
+=======
+                    "id": 133,
+>>>>>>> Stashed changes
                     "nodeType": "PlaceholderStatement",
                     "src": "230:1:0"
                   }
@@ -985,11 +1247,19 @@
               ]
             },
             "documentation": null,
+<<<<<<< Updated upstream
             "id": 23,
             "name": "restricted",
             "nodeType": "ModifierDefinition",
             "parameters": {
               "id": 15,
+=======
+            "id": 136,
+            "name": "restricted",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 128,
+>>>>>>> Stashed changes
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "196:2:0"
@@ -1362,8 +1632,13 @@
             "visibility": "public"
           }
         ],
+<<<<<<< Updated upstream
         "scope": 57,
         "src": "34:480:0"
+=======
+        "scope": 138,
+        "src": "36:176:1"
+>>>>>>> Stashed changes
       }
     ],
     "src": "0:515:0"
@@ -1374,7 +1649,11 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
+<<<<<<< Updated upstream
   "updatedAt": "2022-01-11T14:29:01.971Z",
+=======
+  "updatedAt": "2022-02-02T08:50:55.019Z",
+>>>>>>> Stashed changes
   "devdoc": {
     "methods": {}
   },

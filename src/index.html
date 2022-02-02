@@ -11,6 +11,7 @@
 
   <!-- Bootstrap -->
   <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<<<<<<< Updated upstream
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,6 +20,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+=======
+  <link href="style.css" rel="stylesheet"/>
+>>>>>>> Stashed changes
   <style>
     main {
       margin-top: 60px;
@@ -60,9 +64,87 @@
           <p class="text-center">Loading...</p>
         </div>
         <div id="content">
+<<<<<<< Updated upstream
           <form onSubmit="App.createTask(); return false;">
             <input id="newTask" type="text" class="form-control" placeholder="Add Account number..." required>
             <input type="submit" hidden="">
+=======
+          <form onSubmit="App.createUser()">
+            <div class="grid">
+              <div class="grid-item">
+                <div class="card">
+                  <div class="card-content">
+                    <h1 class="card-header">Account Number</h1>
+                    <button class="card-btn"><input id="accountNo" type="number" class="form-control" placeholder="Add account number..." required> <span>&rarr;</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="card">
+                  <div class="card-content">
+                    <h1 class="card-header">ifsc code</h1>
+                    <button class="card-btn"><input id="ifsc" type="text" class="form-control" placeholder="Add ifsc code..." required> <span>&rarr;</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="card">
+                  <div class="card-content">
+                    <h1 class="card-header">Branch name</h1>
+                    <button class="card-btn"><input id="branchName" type="text" class="form-control" placeholder="Add branch Name..." required> <span>&rarr;</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="card">
+                  <div class="card-content">
+                    <h1 class="card-header">Customer name</h1>
+                    <button class="card-btn"><input id="Name" type="text" class="form-control" placeholder="Add user Name..." required> <span>&rarr;</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="card">
+                  <div class="card-content">
+                    <h1 class="card-header">Address</h1>
+                    <button class="card-btn"><input id="address" type="text" class="form-control" placeholder="Add user address..." required> <span>&rarr;</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="card">
+                  <div class="card-content">
+                    <h1 class="card-header">Birthdate</h1>
+                    <button class="card-btn"><input id="birthDate" type="text" class="form-control" placeholder="Add user birthdate..." required> <span>&rarr;</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="card">
+                  <div class="card-content">
+                    <h1 class="card-header">Mobile number</h1>
+                    <button class="card-btn"><input id="mobileNo" type="number" class="form-control" placeholder="Add user mobile number..." required> <span>&rarr;</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="card">
+                  <div class="card-content">
+                    <h1 class="card-header">Balance</h1>
+                    <button class="card-btn"><input id="balance" type="number" class="form-control" placeholder="Add user balance..." required> <span>&rarr;</span></button>
+                    <button class="card-btn"><input type="submit"> <span>&rarr;</span></button>
+                  </div>
+                </div>
+              </div>
+            
+            
+            
+            
+            
+            
+            
+            
+>>>>>>> Stashed changes
           </form>
           <form onSubmit="App.createTask1(); return false;">
             <input id="newTask" type="text" class="form-control" placeholder="Add Name" required>
