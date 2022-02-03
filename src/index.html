@@ -13,8 +13,8 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0">Bank Management system</a>
+  <nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0 name">BANK MANAGEMENT SYSTEM</a>
     <div class="navigation">
       <ul>
           <li class="list active">
@@ -22,15 +22,15 @@
                   <span class="icon">
                       <ion-icon name="home-outline"></ion-icon>
                   </span>
-                  <span class="text">Home</span>
+                  <span class="text">Form</span>
               </a>
           </li>
           <li class="list">
-              <a href="#content">
+              <a href="#details">
                   <span class="icon">
                       <ion-icon name="document-text-outline"></ion-icon>
                   </span>
-                  <span class="text">Form</span>
+                  <span class="text">Details</span>
               </a>
           </li>
           <div class="indicator"></div>
@@ -44,36 +44,39 @@
           <p class="text-center">Loading...</p>
         </div>
         <div id="content">
-          <h1>Enter the details of the Customer</h1>
+          <div class="form">
+          <div class="formHeading">
+            <h1>ENTER THE DETAILS OF THE CUSTOMER</h1>
+          </div>
           <form onSubmit="App.createUser()">
             <div class="mb-3 row">
               <label for="accountNo" class="col-sm-2 col-form-label">Account Number:</label>
               <div class="col-sm-10">
-                <input id="accountNo" type="number" class="form-control" placeholder="Enter account number..." required>
+                <input id="accountNo" type="number" class="form-control" placeholder="Enter Account Number" required>
               </div>
             </div>
             <div class="mb-3 row">
               <label for="ifsc" class="col-sm-2 col-form-label">IFSC Number:</label>
               <div class="col-sm-10">
-                <input id="ifsc" type="text" class="form-control" placeholder="Enter IFSC code..." required>
+                <input id="ifsc" type="text" class="form-control" placeholder="Enter IFSC code" required>
               </div>
             </div>
             <div class="mb-3 row">
               <label for="branchName" class="col-sm-2 col-form-label">Account Type:</label>
               <div class="col-sm-10">
-                <input id="branchName" type="text" class="form-control" placeholder="savings/current" required>
+                <input id="branchName" type="text" class="form-control" placeholder="Savings/Current" required>
               </div>
             </div>
             <div class="mb-3 row">
               <label for="Name" class="col-sm-2 col-form-label">Customer Name:</label>
               <div class="col-sm-10">
-                <input id="Name" type="text" class="form-control" placeholder="Enter Customer Name..." required>
+                <input id="Name" type="text" class="form-control" placeholder="Enter Customer Name" required>
               </div>
             </div>
             <div class="mb-3 row">
               <label for="address" class="col-sm-2 col-form-label">Address:</label>
               <div class="col-sm-10">
-                <input id="address" type="text" class="form-control" placeholder="Enter Customer Address..." required>
+                <input id="address" type="text" class="form-control" placeholder="Enter Customer Address" required>
               </div>
             </div>
             <div class="mb-3 row">
@@ -83,21 +86,26 @@
               </div>
             </div>
             <div class="mb-3 row">
+              <label for="balance" class="col-sm-2 col-form-label">Aadhar Number:</label>
+              <div class="col-sm-10">
+                <input id="balance" type="number" class="form-control" placeholder="Enter Aadhar Number" required>
+              </div>
+            </div>
+            <div class="mb-3 row">
               <label for="mobileNo" class="col-sm-2 col-form-label">Mobile Number:</label>
               <div class="col-sm-10">
                 <input id="mobileNo" type="number" class="form-control" placeholder="Enter Customer Mobile Number"
                   required>
               </div>
             </div>
-            <div class="mb-3 row">
-              <label for="balance" class="col-sm-2 col-form-label">Account Balance:</label>
-              <div class="col-sm-10">
-                <input id="balance" type="number" class="form-control" placeholder="Enter Account Balance" required>
-              </div>
-            </div>
-            <input type="submit">
+            
+              <input type="submit" class="btn">
           </form>
-          <h1 id="details">Account Details</h1>
+          </div>
+          <div class="displayDetails">
+          <div class="detailsHeading">
+            <h1 id="details">ACCOUNT DETAILS</h1>
+          </div>
           <ul id="usersList" class="list-unstyled">
             <div class="userTemplate" class="checkbox" style="display: none">
               <div class="grid">
@@ -142,16 +150,17 @@
                       </label><br>
                       <label>
                         <p>
-                          Mobile Number:
-                          <span class="mobileNo">content goes here...</span>
+                          Aadhar Number:
+                          <span class="balance">content goes here...</span>
                         </p>
                       </label><br>
                       <label>
                         <p>
-                          Account Balance:
-                          <span class="balance">content goes here...</span>
+                          Mobile Number:
+                          <span class="mobileNo">content goes here...</span>
                         </p>
                       </label><br>
+                      
                     </div>
                   </div>
                 </div>
@@ -159,8 +168,7 @@
 
             </div>
           </ul>
-          <ul id="completedTaskList" class="list-unstyled">
-          </ul>
+          </div>
         </div>
       </main>
     </div>
