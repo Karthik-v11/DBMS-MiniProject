@@ -10,5 +10,4 @@ contract Migrations {
   modifier restricted() {
     if (msg.sender == owner) _;
   }
-
 }

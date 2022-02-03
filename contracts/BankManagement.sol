@@ -14,7 +14,6 @@ contract BankManagement {
     uint balance;
     uint mobileNo;
   }
-  
 
   mapping(uint => User) public users;
 
@@ -35,5 +34,4 @@ contract BankManagement {
     users[userCount] = User(userCount, _accountNo,_IFSC,_branchName, _Name,_addres,_birthdate,_balance,_mobileNo);
     emit userCreated(userCount, _accountNo, _IFSC,_branchName,_Name,_addres,_birthdate,_balance,_mobileNo);
   }
-
 }

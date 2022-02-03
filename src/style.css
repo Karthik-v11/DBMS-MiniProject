@@ -10,11 +10,9 @@ main {
   background-color: #9b2226;
   padding: 0;
 }
-
 .col-lg-12 {
   padding-right: 0;
 }
-
 .form {
   background-color: #ee9b00;
   padding-bottom: 10%;
@@ -22,7 +20,6 @@ main {
 a:not([href]):not([tabindex]) {
   color: #219ebc;
 }
-
 .navbar-brand {
   font-size: 30px;
   padding-left: 30%;
@@ -31,7 +28,6 @@ a:not([href]):not([tabindex]) {
   display: none;
   width: 100%;
 }
-
 .navbar {
   background-color: #000000;
   width: 100vw;
@@ -58,11 +54,9 @@ form {
   border-radius: 5px;
   box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
 }
-
 ul {
   margin-bottom: 0px;
 }
-
 p {
   width: fit-content;
   margin: 0;
@@ -85,7 +79,6 @@ p {
   float: left;
   margin: 20px;
 }
-
 .grid-item {
   background-color: #fff;
   border-radius: 0.4rem;
@@ -94,25 +87,22 @@ p {
   cursor: pointer;
   transition: 0.2s;
 }
-
 .grid-item:hover {
   transform: translateY(-0.5%);
   box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
   font-size: 50;
   color: #ffffff;
 }
-
 .card:hover {
   background-color: #4caf50;
 }
 .card-content {
   padding: 3rem;
 }
-
 .btn {
   padding: 15px 38px;
   margin-left: 25%;
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
   border: none;
   color: white;
   text-align: center;
@@ -120,7 +110,6 @@ p {
   display: inline-block;
   font-size: 16px;
 }
-
 .navigation {
   position: relative;
   width: 400px;
@@ -129,7 +118,6 @@ p {
   justify-content: center;
   align-items: center;
 }
-
 .navigation ul {
   display: flex;
   width: 350px;
@@ -141,7 +129,6 @@ p {
   height: 70px;
   z-index: 1;
 }
-
 .navigation ul li a {
   position: relative;
   display: flex;
@@ -152,7 +139,6 @@ p {
   text-align: center;
   font-weight: 500;
 }
-
 .navigation ul li a .icon {
   position: relative;
   display: block;
@@ -162,11 +148,9 @@ p {
   transition: 0.5s;
   color: var(#222327);
 }
-
 .navigation ul li.active a .icon {
   transform: translateY(-16px);
 }
-
 .navigation ul li a .text {
   position: absolute;
   color: var(#222327);
@@ -177,12 +161,10 @@ p {
   opacity: 0;
   transform: translateY(20px);
 }
-
 .navigation ul li.active a .text {
   opacity: 1;
   transform: translateY(10px);
 }
-
 .indicator {
   position: absolute;
   top: -50%;
@@ -193,7 +175,6 @@ p {
   border: 6px solid var(#222327);
   transition: 0.5s;
 }
-
 .indicator::before {
   content: "";
   position: absolute;
