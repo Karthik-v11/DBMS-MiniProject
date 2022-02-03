@@ -2,6 +2,9 @@
 .container-fluid {
   padding: 0;
 }
+html {
+  overflow-x: hidden;
+}
 main {
   margin-top: 70px;
   overflow: hidden;
@@ -15,7 +18,7 @@ main {
 }
 .form {
   background-color: #ee9b00;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 a:not([href]):not([tabindex]) {
   color: #219ebc;
@@ -48,9 +51,9 @@ form {
   height: 90vh;
   margin: 0 10%;
   margin-bottom: 5%;
-  margin-top: 2%;
+  margin-top: 1%;
   padding-left: 12%;
-  padding-top: 5%;
+  padding-top: 3%;
   border-radius: 5px;
   box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
 }
@@ -88,7 +91,7 @@ p {
   transition: 0.2s;
 }
 .grid-item:hover {
-  transform: translateY(-0.5%);
+  transform: translateY(-1%);
   box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
   font-size: 50;
   color: #ffffff;
